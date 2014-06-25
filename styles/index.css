@@ -1,0 +1,116 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#menu {
+    position: fixed;
+    display: table;
+
+    height: 100%;
+}
+
+#menu ul {
+    display: table-cell;
+    color: #888;
+
+    vertical-align: middle;
+    list-style-type: disc;
+}
+
+#menu li {
+    margin: 5px 0;
+    font-size: 1.3em;
+}
+#menu li:hover {
+    cursor: pointer;
+}
+
+#menu li span {
+    display: none;
+
+    font-size: 0.8em;
+    list-style-type: normal;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 60px;
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+#index {
+    display: table;
+
+    color: #DDD;
+    background-color: #111;
+    background: radial-gradient(circle, #232323, #050505);
+}
+
+#cgi {
+    color: #333;
+    background: url('../images/fond_cgi.jpg') no-repeat center fixed;
+}
+
+#auchan {
+    color: #333;
+    background: url('../images/fond_auchan.svg') no-repeat center fixed;
+}
+
+.wrapper {
+    display: table-cell;
+    width: auto;
+
+    vertical-align: middle;
+}
+
+h1, h2 {
+    margin: 0;
+    text-align: center;
+}
+h1 {
+    font-size: 3em;
+    font-weight: 400;
+}
+h1:after {
+    display: block;
+}
+h2 {
+    font-weight: 300;
+}
+
+hr {
+    width: 60%;
+    margin: 0 20%;
+
+    border: 0 none;
+    background: #DDD;
+}
+
+#index hr {
+    border-bottom: 1px solid #DDD;
+}
+#cgi hr, #auchan hr {
+    border-bottom: 1px solid #333;
+}
+
+p {
+    margin: 0;
+    margin-top: 15px;
+
+    width: 30%;
+}
