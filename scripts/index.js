@@ -4,9 +4,9 @@ $(document).ready(function() {
     });
 
     $('.corps img').each(function() {
-        var width = $(this).width();
+        /*var width = $(this).width();
         var height = 'auto';
-        $(this).css({'width':width, 'height':height});
+        $(this).css({'width':width, 'height':height});*/
     });
 
     var items = $('#menu li').click(function() {
