@@ -126,21 +126,18 @@ html, body {
     height: 100%;
 }
 .right {
-    display: table;
     float: right;
 
     width: 30%;
     height: 100%;
 }
 .right img {
-    display: table-cell;
     float: right;
 
     height: 100%;
     width: auto;
 
     max-width: 100%;
-    vertical-align: middle;
 }
 
 h1, h2 {
