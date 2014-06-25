@@ -134,10 +134,8 @@ html, body {
 .right img {
     float: right;
 
-    height: 100%;
-    width: auto;
-
-    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 h1, h2 {
