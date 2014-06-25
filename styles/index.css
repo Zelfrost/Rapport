@@ -47,28 +47,19 @@ html, body {
 
     padding: 0 60px;
 
+    color: #DDD;
+
+    background-color: #111;
+    background: radial-gradient(circle, #232323, #050505);
+
     -webkit-background-size: cover;
        -moz-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
 }
 
-#index {
+#index, #projet {
     display: table;
-
-    color: #DDD;
-    background-color: #111;
-    background: radial-gradient(circle, #232323, #050505);
-}
-
-#cgi {
-    color: #333;
-    background: url('../images/fond_cgi.jpg') no-repeat center fixed;
-}
-
-#auchan {
-    color: #333;
-    background: url('../images/fond_auchan.svg') no-repeat center fixed;
 }
 
 .wrapper {
@@ -76,6 +67,79 @@ html, body {
     width: auto;
 
     vertical-align: middle;
+}
+#applications .wrapper {
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+}
+#applications .wrapper:hover {
+    cursor: pointer;
+}
+
+.content {
+    width: 70%;
+    margin: 0 15%;
+}
+#applications .content {
+    display: none;
+
+    width: 90%;
+    margin: 0 5%;
+}
+
+.entete {
+    height: 20%;
+}
+#applications .entete {
+    display: table;
+
+    width: 100%;
+    height: 100%;
+}
+
+.corps {
+    height: 80%;
+}
+
+#cgi, #aecf {
+    height: 45%;
+    padding: 30px;
+
+    margin: 0;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+#aecf {
+    position: relative;
+    top: 5%;
+}
+
+.left {
+    float: left;
+    margin-right: 5%;
+
+    width: 65%;
+    height: 100%;
+
+    overflow-y: hidden;
+}
+.right {
+    float: right;
+
+    width: 30%;
+    height: 100%;
+}
+.right img {
+    float: right;
+
+    height: 100%;
+    width: auto;
+
+    max-width: 100%;
 }
 
 h1, h2 {
@@ -86,11 +150,19 @@ h1 {
     font-size: 3em;
     font-weight: 400;
 }
-h1:after {
-    display: block;
+#projet h1 {
+    text-align: left;
 }
+
 h2 {
     font-weight: 300;
+}
+
+h3 {
+    margin: 0;
+}
+#applications h3 {
+    color: #428BCA;
 }
 
 hr {
@@ -101,16 +173,48 @@ hr {
     background: #DDD;
 }
 
-#index hr {
+hr {
     border-bottom: 1px solid #DDD;
 }
-#cgi hr, #auchan hr {
-    border-bottom: 1px solid #333;
+.corps hr {
+    height: 0;
+    border: 0 none;
+
+    opacity: 0;
+
+    clear: both;
 }
 
 p {
-    margin: 0;
-    margin-top: 15px;
+    width: 100%;
+    margin-top: 5px;
 
-    width: 30%;
+    font-size: 0.9em;
+    text-align: justify;
+}
+#projet p {
+    margin: 0;
+    font-size: 1.1em;
+}
+#applications p {
+    color: #EEE;
+}
+
+.application {
+    float: left;
+    width: 25%;
+
+    padding: 20px 20px;
+}
+
+.application img {
+    display: table-cell;
+    float: left;
+
+    width: 100%;
+    padding: 15px;
+
+    background: #EEE;
+
+    vertical-align: middle;
 }
