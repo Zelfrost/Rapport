@@ -1,4 +1,6 @@
 $(window).bind('load', function() {
+    $(window).resize();
+
     $('.page').each(function() {
         $('#menu ul').append('<li></li>');
     });
@@ -12,18 +14,20 @@ $(window).bind('load', function() {
 
     textSize($(this));
 
+    if ($(window).width() > 1024) {
+        bindHandler();
+    }
+
     $(window).resize(function() {
         textSize($(this));
+        if ($(window).width() > 1024) {
+            bindHandler();
+        } else {
+            unbindHandler();
+        }
     });
 
-    $('.application .wrapper').hover(
-        function() {
-            $('.content', this).stop().slideDown();
-        },
-        function() {
-            $('.content', this).stop().slideUp();
-        }
-    );
+
 });
 
 function textSize()
@@ -34,4 +38,24 @@ function textSize()
             $(p).css('height', $(this).height() + 60);
         }
     });
+}
+
+function bindHandler()
+{
+    $('.application .content').css('display', 'none');
+    $('.application .wrapper').hover(
+        function() {
+            $('.content', this).stop().slideDown();
+        },
+        function() {
+            $('.content', this).stop().slideUp();
+        }
+    );
+
+}
+
+function unbindHandler()
+{
+    $('.application .content').css('display', 'block');
+    $('.application .wrapper').unbind();
 }

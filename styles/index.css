@@ -249,8 +249,33 @@ p {
 
     .app-container {
         float: none;
+        display: block;
 
+        width: 100%;
+    }
+
+    .application {
         display: block;
         width: 100%;
+    }
+
+    #applications .wrapper, #applications .entete {
+        width: 100%;
+    }
+
+    #applications h1, #applications h2 {
+        display: block;
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .application hr {
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    #applications .content {
+        display: block;
     }
 }
