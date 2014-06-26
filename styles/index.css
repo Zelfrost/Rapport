@@ -92,6 +92,9 @@ html, body {
 
     width: 90%;
     margin: 0 5%;
+
+    height: 100px;
+    overflow: hidden;
 }
 
 .entete {
@@ -308,6 +311,9 @@ p {
 
     #applications .content {
         display: block;
+        height: auto;
+        
+        overflow: visible;
     }
 
     .arrow {

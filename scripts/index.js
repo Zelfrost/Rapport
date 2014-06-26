@@ -31,13 +31,13 @@ $(window).bind('load', function() {
 
     $('html, body').scroll(function() {
         if ($('#applications hr').position().top < $(document).scrollTop() + $(window).height()) {
-            $('#applications hr').animate({
-                backgroundColor:'#428BCA',
-                borderColor:'#428BCA'
-            }, 600).animate({
-                backgroundColor:'#DDD',
-                borderColor:'#DDD'
-            }, 600);
+            $('#applications .content').slideDown(400).slideUp(400);
+            setTimeout(function() {
+                $('#applications .content').css({
+                    'height':'auto',
+                    'overflow':'visible'
+                }, 850);
+            }, 1000);
             $('html, body').unbind();
         }
     });
