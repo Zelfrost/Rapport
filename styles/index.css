@@ -135,7 +135,9 @@ html, body {
     float: right;
 
     width: 100%;
-    height: auto;
+    height: 100%;
+
+    opacity: 0.5;
 }
 
 h1, h2 {
@@ -213,4 +215,27 @@ p {
     background: #EEE;
 
     vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+    #menu {
+        display: none;
+    }
+
+    #index, #projet {
+        height: 100%;
+    }
+
+    .page {
+        height: auto;
+        padding: 0;
+    }
+
+    #cgi, #aecf {
+        width: 100%;
+        border-radius: 0;
+    }
+    #aecf {
+        margin-top: 20px;
+    }
 }
