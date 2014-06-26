@@ -235,6 +235,10 @@ p {
         padding: 0;
     }
 
+    .entete {
+        margin-bottom: 40px;
+    }
+
     #cgi, #aecf {
         width: 100%;
         border-radius: 0;
