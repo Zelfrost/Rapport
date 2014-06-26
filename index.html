@@ -9,7 +9,9 @@
 
     <body>
         <div id='menu'>
-            <ul></ul>
+            <div class='wrapper'>
+                <ul></ul>
+            </div>
         </div>
 
         <div class='page' id='index'>
@@ -66,7 +68,7 @@
             <div class='wrapper'>
                 <div class='content'>
                     <h1>Le but du stage ?</h1>
-                    <p>Remplacer les applications externes à AECF ( fournisseurs, entrepôt ) dans les environnements de qualification.</p>
+                    <p>Remplacer les appels aux applications externes à AECF ( fournisseurs, entrepôt ) dans les environnements de qualification, en créant des applications internes aux fonctionnements semblables.</p>
                     <p>Voyons ces applications en détails.</p>
                 </div>
             </div>
@@ -77,13 +79,12 @@
                 <div class='application'>
                     <div class='wrapper'>
                         <div class='entete'>
-                            <h1>LM7</h1><hr>
+                            <h1><div class='arrow up'></div>LM7</h1><hr>
                                 <div class='content'>
-                                    <p>Sed eget tristique purus. Ut rutrum laoreet turpis, eleifend vulputate nisl pulvinar in. Fusce condimentum risus eget imperdiet tristique. Curabitur non fringilla lacus, a cursus velit.</p>
-                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    <p>Sed eget tristique purus. Ut rutrum laoreet turpis, eleifend vulputate nisl pulvinar in. Fusce condimentum risus eget imperdiet tristique. Curabitur non fringilla lacus, a cursus velit.</p>
+                                    <p>LM7 est une application qui communique avec les entrepôts. Elle réceptionne des informations sur des commandes clients venant du Front-Office et du Back-Office, les traite, et réponds si elle peut ou non livrer chaque article, et en quelle quantité.</p>
+                                    <p>La réception se fait par un cron en PHP, l'envoi via un une IHM à disposition de l'utilisateur. Il peut y choisir les articles, la quantité, ou encore le nombre de colis dans lesquels la commande sera réparti.</p>
                                 </div>
-                            <hr><h2>Notification de commandes</h2>
+                            <hr><h2>Notification de commandes<div class='arrow down'></h2>
                         </div>
                     </div>
                 </div>
@@ -93,13 +94,12 @@
                 <div class='application'>
                     <div class='wrapper'>
                         <div class='entete'>
-                            <h1>Comarch</h1><hr>
+                            <h1><div class='arrow up'></div>Comarch</h1><hr>
                                 <div class='content'>
-                                    <p>Sed eget tristique purus. Ut rutrum laoreet turpis, eleifend vulputate nisl pulvinar in. Fusce condimentum risus eget imperdiet tristique. Curabitur non fringilla lacus, a cursus velit.</p>
-                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    <p>Sed eget tristique purus. Ut rutrum laoreet turpis, eleifend vulputate nisl pulvinar in. Fusce condimentum risus eget imperdiet tristique. Curabitur non fringilla lacus, a cursus velit.</p>
+                                    <p>Comarch a la même fonction que LM7, mais est cette fois-ci en lien direct avec les fournisseurs, et gère uniquement les cas de commandes avec des articles qui sont demandés directement aux fournisseurs ( pas de stock ), ou de commande de destinées à remplir les stocks.</p>
+                                    <p>La réception et l'envoi marche sur le même principe que pour LM7, et les IHM sont très proches. Les nuances sont dans le format du flux et les options de personnalisation offertent à l'utilisateur.</p>
                                 </div>
-                            <hr><h2>Notification de commandes</h2>
+                            <hr><h2>Notification de commandes<div class='arrow down'></h2>
                         </div>
                     </div>
                 </div>
@@ -109,13 +109,12 @@
                 <div class='application'>
                     <div class='wrapper'>
                         <div class='entete'>
-                            <h1>Expedito</h1><hr>
+                            <h1><div class='arrow up'></div>Expedito</h1><hr>
                                 <div class='content'>
-                                    <p>Sed eget tristique purus. Ut rutrum laoreet turpis, eleifend vulputate nisl pulvinar in. Fusce condimentum risus eget imperdiet tristique. Curabitur non fringilla lacus, a cursus velit.</p>
-                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    <p>Sed eget tristique purus. Ut rutrum laoreet turpis, eleifend vulputate nisl pulvinar in. Fusce condimentum risus eget imperdiet tristique. Curabitur non fringilla lacus, a cursus velit.</p>
+                                    <p>Expedito est une application qui permet de générer les étiques de suivi des commandes. Elle est utilisée via un webservice, que le Back-Office appelle afin de créer le suivi de commandes pour les clients.</p>
+                                    <p>Ici, rien n'est personnalisable. Le flux est envoyé par le Back-Office, qui gère lui même les informations à y mettre, puis attends que l'application réalise les traitements nécessairement (génération d'URL de suivi, création d'un numéro de commande), et récupère le flux renvoyé, qui contient toutes ces informations.</p>
                                 </div>
-                            <hr><h2>Etiquettes de commandes</h2>
+                            <hr><h2>Etiquettes de commandes<div class='arrow down'></h2>
                         </div>
                     </div>
                 </div>
@@ -125,13 +124,12 @@
                 <div class='application'>
                     <div class='wrapper'>
                         <div class='entete'>
-                            <h1>Maxxing</h1><hr>
+                            <h1><div class='arrow up'></div>Maxxing</h1><hr>
                                 <div class='content'>
-                                    <p>Sed eget tristique purus. Ut rutrum laoreet turpis, eleifend vulputate nisl pulvinar in. Fusce condimentum risus eget imperdiet tristique. Curabitur non fringilla lacus, a cursus velit.</p>
-                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    <p>Sed eget tristique purus. Ut rutrum laoreet turpis, eleifend vulputate nisl pulvinar in. Fusce condimentum risus eget imperdiet tristique. Curabitur non fringilla lacus, a cursus velit.</p>
+                                    <p>Maxxing est l'application qui gère les points de fidélités et les remises clients. Elle dispose pour cela sa propre base de produits et d'offres, et donne accès à un webservice qui, lorsqu'il recoit des informations sur une commande, retourne si il y a des offres associées à ses articles.</p>
+                                    <p>Aucune personnalisation ici non plus, le Front-Office ou le Back-Office gèrent eux-mêmes le flux envoyés, puis attends une réponse qui donne des détails sur les remises du produits.</p>
                                 </div>
-                            <hr><h2>Gestion de la fidélité client</h2>
+                            <hr><h2>Gestion de la fidélité client<div class='arrow down'></h2>
                         </div>
                     </div>
                 </div>
@@ -139,6 +137,7 @@
         </div>
 
         <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+        <script type='text/javascript' src='scripts/color.js'></script>
         <script type='text/javascript' src='scripts/index.js'></script>
     </body>
 </html>

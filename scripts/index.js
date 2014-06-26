@@ -5,6 +5,8 @@ $(window).bind('load', function() {
         $('#menu ul').append('<li></li>');
     });
 
+    $('#menu li').animate({color:'#FFF'}, 600).animate({color:'#428BCA'}, 600);
+
     var items = $('#menu li').click(function() {
         var index = items.index(this);
         $('html, body').animate({
@@ -27,7 +29,18 @@ $(window).bind('load', function() {
         }
     });
 
-
+    $('html, body').scroll(function() {
+        if ($('#applications hr').position().top < $(document).scrollTop() + $(window).height()) {
+            $('#applications hr').animate({
+                backgroundColor:'#428BCA',
+                borderColor:'#428BCA'
+            }, 600).animate({
+                backgroundColor:'#DDD',
+                borderColor:'#DDD'
+            }, 600);
+            $('html, body').unbind();
+        }
+    });
 });
 
 function textSize()

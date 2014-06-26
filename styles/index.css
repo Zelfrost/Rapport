@@ -9,6 +9,7 @@ html, body {
     margin: 0;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
 }
 
 #menu {
@@ -19,10 +20,9 @@ html, body {
 }
 
 #menu ul {
-    display: table-cell;
-    color: #888;
+    color: #428BCA;
+    font-size: 1.5em;
 
-    vertical-align: middle;
     list-style-type: disc;
 }
 
@@ -50,16 +50,21 @@ html, body {
     color: #DDD;
 
     background-color: #111;
-    background: radial-gradient(circle, #232323, #050505);
+    background: radial-gradient(circle, #252525, #050505) fixed;
 
     -webkit-background-size: cover;
        -moz-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
 }
-
 #index, #projet {
     display: table;
+}
+#entreprises {
+    background: radial-gradient(circle, #454545, #252525) fixed;
+}
+#applications {
+    background: radial-gradient(circle, #454545, #252525) fixed;
 }
 
 .wrapper {
@@ -144,16 +149,20 @@ h1 {
 #projet h1 {
     text-align: left;
 }
+#applications h1 {
+    position: relative;
+    color: #428BCA;
+}
 
 h2 {
     font-weight: 300;
 }
+#applications h2 {
+    position: relative;
+}
 
 h3 {
     margin: 0;
-}
-#applications h1 {
-    color: #428BCA;
 }
 
 hr {
@@ -209,12 +218,34 @@ p {
     width: 226px;
 }
 
+.arrow {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.arrow.up {
+    bottom: 1px;
+    border-bottom: 10px solid #DDD;
+}
+.arrow.down {
+    top: 1px;
+    right: 0;
+    border-top: 10px solid #DDD;
+}
+
 .application hr {
     width: 100%;
     margin: 0;
 }
 
 @media screen and (max-width: 1024px) {
+    html, body {
+        overflow: visible;
+    }
     body {
         font-size: 2em;
     }
@@ -277,5 +308,9 @@ p {
 
     #applications .content {
         display: block;
+    }
+
+    .arrow {
+        display: none;
     }
 }
