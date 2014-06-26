@@ -218,6 +218,10 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
+    body {
+        font-size: 2em;
+    }
+
     #menu {
         display: none;
     }
