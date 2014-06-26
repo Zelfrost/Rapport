@@ -12,6 +12,56 @@ html, body, #html {
     overflow: hidden;
 }
 
+#info {
+    display: table;
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.95);
+}
+#info * {
+    text-align: center;
+}
+#info .arrow-key {
+    display: table;
+    margin: 0 auto;
+
+    width: 40px;
+    height: 50px;
+
+    margin-bottom: 10px;
+
+    background-color: #CCC;
+    box-shadow: 0 4px 0 #AAA;
+
+    border-radius: 3px;
+}
+#info .text-wrapper {
+    display: table-cell;
+
+    vertical-align: middle;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) inset;
+}
+
+#info p {
+    font-size: 1.3em;
+    color: #DDD;
+}
+
+#info button {
+    padding: 10px 60px;
+
+    background: #DDD;
+    border: 1px solid #AAA;
+    border-radius: 5px;
+}
+#info button:hover {
+    background: #FFF;
+    cursor: pointer;
+}
+
 #menu {
     position: fixed;
     display: table;
@@ -251,6 +301,12 @@ p {
     }
     body {
         font-size: 2em;
+    }
+    #info {
+        display: none;
+    }
+    #html {
+        overflow: visible;
     }
 
     #menu {
