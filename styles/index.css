@@ -70,10 +70,9 @@ html, body {
 }
 #applications .wrapper {
     display: block;
-    overflow: hidden;
+    width: 226px;
 
-    width: 100%;
-    height: 100%;
+    margin: auto;
 }
 #applications .wrapper:hover {
     cursor: pointer;
@@ -92,12 +91,6 @@ html, body {
 
 .entete {
     height: 20%;
-}
-#applications .entete {
-    display: table;
-
-    width: 100%;
-    height: 100%;
 }
 
 .corps {
@@ -135,7 +128,7 @@ html, body {
     float: right;
 
     width: 100%;
-    height: auto;
+    height: 100%;
 
     opacity: 0.5;
 }
@@ -159,7 +152,7 @@ h2 {
 h3 {
     margin: 0;
 }
-#applications h3 {
+#applications h1 {
     color: #428BCA;
 }
 
@@ -198,23 +191,27 @@ p {
     color: #EEE;
 }
 
-.application {
+.app-container {
+    display: table;
     float: left;
-    width: 25%;
 
-    padding: 20px 20px;
+    width: 25%;
+    height: 100%;
 }
 
-.application img {
+.application {
     display: table-cell;
-    float: left;
-
-    width: 100%;
-    padding: 15px;
-
-    background: #EEE;
-
     vertical-align: middle;
+}
+
+.application .entete {
+    padding: 15px;
+    width: 226px;
+}
+
+.application hr {
+    width: 100%;
+    margin: 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -245,5 +242,15 @@ p {
     }
     #aecf {
         margin-top: 20px;
+    }
+    .right img {
+        height: auto;
+    }
+
+    .app-container {
+        float: none;
+
+        display: block;
+        width: 100%;
     }
 }

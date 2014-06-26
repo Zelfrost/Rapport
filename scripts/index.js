@@ -16,7 +16,7 @@ $(window).bind('load', function() {
         textSize($(this));
     });
 
-    $('.application').hover(
+    $('.application .wrapper').hover(
         function() {
             $('.content', this).stop().slideDown();
         },
