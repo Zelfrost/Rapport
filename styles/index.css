@@ -24,20 +24,6 @@ html, body, #html {
 #info * {
     text-align: center;
 }
-#info .arrow-key {
-    display: table;
-    margin: 0 auto;
-
-    width: 40px;
-    height: 50px;
-
-    margin-bottom: 10px;
-
-    background-color: #CCC;
-    box-shadow: 0 4px 0 #AAA;
-
-    border-radius: 3px;
-}
 #info .text-wrapper {
     display: table-cell;
 
