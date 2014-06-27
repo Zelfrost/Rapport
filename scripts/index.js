@@ -56,23 +56,24 @@ $(window).bind('load', function() {
 
     $('#html').scroll(function() {
         if ($('#applications hr').position().top < $(document).scrollTop() + $(window).height()) {
-            $('#applications .content').slideDown(400).slideUp(400);
-            setTimeout(function() {
+            $('#applications .content').slideDown(400).slideUp(400, function() {
+                $('#applications').removeAttr('data-seen');
+
                 $('#applications .content').css({
                     'height':'auto',
                     'overflow':'visible'
-                }, 850);
-            }, 1000);
+                });
+
+                $('.application .wrapper').hover(
+                    function() {
+                        $('.content', this).stop().slideDown();
+                    },
+                    function() {
+                        $('.content', this).stop().slideUp();
+                    }
+                );
+            });
             $('#html').unbind();
-            
-            $('.application .wrapper').hover(
-                function() {
-                    $('.content', this).stop().slideDown();
-                },
-                function() {
-                    $('.content', this).stop().slideUp();
-                }
-            );
         }
     });
 
@@ -93,14 +94,17 @@ $(window).bind('load', function() {
     function bindHandler()
     {
         $('.application .content').css('display', 'none');
-        $('.application .wrapper').hover(
-            function() {
-                $('.content', this).stop().slideDown();
-            },
-            function() {
-                $('.content', this).stop().slideUp();
-            }
-        );
+
+        if ($('#applications').attr('data-seen') === undefined) {
+            $('.application .wrapper').hover(
+                function() {
+                    $('.content', this).stop().slideDown();
+                },
+                function() {
+                    $('.content', this).stop().slideUp();
+                }
+            );  
+        }
 
         $(document).on('keyup', function(e) {
             if (e.which == 38) {
