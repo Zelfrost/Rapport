@@ -13,8 +13,9 @@ html, body, #html {
 }
 
 #info {
-    display: table;
     position: absolute;
+    z-index: 2;
+    display: table;
 
     height: 100%;
     width: 100%;
@@ -50,8 +51,9 @@ html, body, #html {
 
 #menu {
     position: fixed;
-    display: table;
+    z-index: 0;
 
+    display: table;
     height: 100%;
 }
 
