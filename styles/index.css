@@ -192,6 +192,8 @@ h1 {
 }
 #applications h1 {
     position: relative;
+
+    font-size: 30px;
     color: #428BCA;
 }
 
@@ -346,6 +348,9 @@ p {
         width: 100%;
 
         text-align: center;
+    }
+    #applications h1 {
+        font-size: 3em;
     }
 
     .application hr {
