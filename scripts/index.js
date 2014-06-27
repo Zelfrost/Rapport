@@ -64,6 +64,15 @@ $(window).bind('load', function() {
                 }, 850);
             }, 1000);
             $('#html').unbind();
+            
+            $('.application .wrapper').hover(
+                function() {
+                    $('.content', this).stop().slideDown();
+                },
+                function() {
+                    $('.content', this).stop().slideUp();
+                }
+            );
         }
     });
 
